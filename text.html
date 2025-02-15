@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Ganteng?</title>
+    <style>
+        /* Background dari URL */
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+            background: url('https://files.catbox.moe/yyfmxo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white; /* Agar teks lebih jelas */
+        }
+
+        /* Style teks */
+        h2 {
+            font-size: 24px;
+            background: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        /* Style tombol */
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 5px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Pesan setelah menekan "Iyaa" */
+        #response {
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: bold;
+            display: none; /* Awalnya disembunyikan */
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        /* Logo di atas teks */
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Audio */
+        audio {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <img class="logo" src="https://files.catbox.moe/yyfmxo.jpg" alt="Logo">
+
+    <h2>Jose ganteng ga?</h2>
+
+    <div class="buttons">
+        <button id="yesButton">Iyaa</button>
+        <button id="noButton">Ngga</button>
+    </div>
+
+    <p id="response">Lah gw mah memang ganteng🗿😏</p>
+
+    <!-- Audio dari URL (Diperbarui) -->
+    <audio controls>
+        <source src="https://files.catbox.moe/qyclbj.mp4" type="audio/mpeg">
+        Browser kamu tidak mendukung audio.
+    </audio>
+
+    <script>
+        let yesButton = document.getElementById("yesButton");
+        let noButton = document.getElementById("noButton");
+        let responseText = document.getElementById("response");
+        let size = 18;
+
+        // Saat tombol "Ngga" ditekan, tombol "Iyaa" akan semakin membesar
+        noButton.addEventListener("click", function() {
+            size += 5;
+            yesButton.style.fontSize = size + "px";
+            yesButton.style.padding = (size / 2) + "px " + (size) + "px";
+        });
+
+        // Saat tombol "Iyaa" ditekan, teks muncul
+        yesButton.addEventListener("click", function() {
+            responseText.style.display = "block"; // Baru muncul setelah ditekan
+        });
+    </script>
+
+</body>
+</html>
