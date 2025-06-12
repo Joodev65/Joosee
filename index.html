@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard ID Channel | JooCode</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div id="introOverlay" class="overlay">
+    <div class="popup">
+      <img src="https://img1.pixhost.to/images/6436/610311176_rellsayangraisa.jpg" class="popup-avatar" />
+      <h2>Selamat Datang di JooCode!</h2>
+      <p>Masukkan ID Channel WhatsApp kamu dan lihat semua ID yang telah masuk!</p>
+      <button onclick="closeOverlay()">Oke, Lanjutkan</button>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <img src="https://img1.pixhost.to/images/6436/610311176_rellsayangraisa.jpg" class="avatar" />
+    <h1>JooCode Channel Dashboard</h1>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Masukkan ID Channel WhatsApp</h2>
+      <input type="text" id="channelInput" placeholder="Contoh: joocode@newsletter" />
+      <button onclick="submitID()">Submit</button>
+    </section>
+
+    <section class="card">
+      <h2>Dashboard ID Channel</h2>
+      <ul id="idList"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
